@@ -1,0 +1,902 @@
+{
+  "name": "AfectadosPoblacion",
+  "displayName": "AfectadosPoblacion",
+  "description": "saS",
+  "category": "",
+  "helpUrl": "https://localhost/server/rest/directories/arcgisoutput/TFM/AfectadosPoblacion_GPServer/TFM_AfectadosPoblacion/AfectadosPoblacion.htm",
+  "serverInfo": {
+    "currentVersion": 10.6,
+    "url": "https://localhost/server/rest/services/TFM/AfectadosPoblacion/GPServer/",
+    "hasResultMapServer": true,
+    "resultMapServerName": "TFM/AfectadosPoblacion",
+    "supportsUpload": false
+  },
+  "useResultMapServer": false,
+  "taskUrl": "http://localhost/server/rest/services/TFM/AfectadosPoblacion/GPServer/AfectadosPoblacion",
+  "isSynchronous": false,
+  "inputParams": [
+    {
+      "name": "Feature_Set",
+      "dataType": "GPFeatureRecordSetLayer",
+      "description": "xcz",
+      "defaultValue": {},
+      "category": "",
+      "label": "Feature Set",
+      "visible": true,
+      "required": true,
+      "featureSetMode": "layers",
+      "tooltip": "Feature Set"
+    },
+    {
+      "name": "Distance__value_or_field_",
+      "dataType": "GPLinearUnit",
+      "description": "S",
+      "defaultValue": {
+        "distance": 50,
+        "units": "esriMeters"
+      },
+      "category": "",
+      "label": "Distancia",
+      "visible": true,
+      "required": true,
+      "tooltip": "Distance [value or field]"
+    },
+    {
+      "name": "Field_Info",
+      "dataType": "GPString",
+      "description": "S",
+      "defaultValue": "OBJECTID OBJECTID VISIBLE NONE;Shape Shape VISIBLE NONE;CDSSCC CDSSCC VISIBLE NONE;CODPROV CODPROV VISIBLE NONE;CODMUNI CODMUNI VISIBLE NONE;POB_TOTAL POB_TOTAL VISIBLE RATIO;POB_SPAIN POB_SPAIN VISIBLE NONE;Shape_Length Shape_Length VISIBLE NONE;Shape_Area Shape_Area VISIBLE NONE",
+      "category": "",
+      "label": "Field Info",
+      "visible": false,
+      "required": false,
+      "tooltip": "Field Info"
+    },
+    {
+      "name": "Dissolve_Field_s_",
+      "dataType": "GPMultiValue:GPString",
+      "description": "S",
+      "defaultValue": [
+        "FID_AvisosMadrid2018_Select3_Buf",
+        "Barrio"
+      ],
+      "category": "",
+      "choiceList": [
+        "OBJECTID",
+        "FID_AvisosMadrid2018_Select3_Buf",
+        "RepeticionMismoAviso",
+        "Date",
+        "Barrio",
+        "Razon",
+        "BUFF_DIST",
+        "ORIG_FID",
+        "FID_SSCC_Madrid",
+        "CDSSCC",
+        "CODPROV",
+        "CODMUNI",
+        "POB_TOTAL",
+        "POB_SPAIN",
+        "Shape_Length",
+        "Shape_Area"
+      ],
+      "label": "Dissolve_Field(s)",
+      "visible": false,
+      "required": false,
+      "tooltip": "Dissolve_Field(s)"
+    }
+  ],
+  "outputParams": [
+    {
+      "name": "Output_Feature_Class",
+      "dataType": "GPFeatureRecordSetLayer",
+      "description": "Entidades seleccionadas",
+      "defaultValue": {
+        "displayFieldName": "",
+        "geometryType": "esriGeometryPoint",
+        "spatialReference": {
+          "wkid": 25830,
+          "latestWkid": 25830
+        },
+        "fields": [
+          {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OID"
+          },
+          {
+            "name": "RepeticionMismoAviso",
+            "type": "esriFieldTypeSmallInteger",
+            "alias": "RepeticionAvisos"
+          },
+          {
+            "name": "Date",
+            "type": "esriFieldTypeDate",
+            "alias": "Fecha",
+            "length": 8
+          },
+          {
+            "name": "Barrio",
+            "type": "esriFieldTypeString",
+            "alias": "Barrio",
+            "length": 50
+          },
+          {
+            "name": "Razon",
+            "type": "esriFieldTypeString",
+            "alias": "Razon",
+            "length": 255
+          }
+        ],
+        "features": [],
+        "exceededTransferLimit": false
+      },
+      "category": "",
+      "label": "Output Feature Class",
+      "visible": true,
+      "required": true,
+      "featureSetMode": "layers",
+      "tooltip": "Output Feature Class",
+      "renderer": {
+        "type": "simple",
+        "symbol": {
+          "color": [
+            0,
+            0,
+            128,
+            128
+          ],
+          "size": 18,
+          "angle": 0,
+          "xoffset": 0,
+          "yoffset": 0,
+          "type": "esriSMS",
+          "style": "esriSMSCircle",
+          "outline": {
+            "color": [
+              0,
+              0,
+              128,
+              255
+            ],
+            "width": 0.75,
+            "type": "esriSLS",
+            "style": "esriSLSSolid"
+          }
+        }
+      },
+      "popup": {
+        "title": "",
+        "fields": [
+          {
+            "name": "OBJECTID",
+            "alias": "OID",
+            "type": "esriFieldTypeOID",
+            "visible": true
+          },
+          {
+            "name": "RepeticionMismoAviso",
+            "alias": "RepeticionAvisos",
+            "type": "esriFieldTypeSmallInteger",
+            "visible": true
+          },
+          {
+            "name": "Date",
+            "alias": "Fecha",
+            "type": "esriFieldTypeDate",
+            "visible": true
+          },
+          {
+            "name": "Barrio",
+            "alias": "Barrio",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "Razon",
+            "alias": "Razon",
+            "type": "esriFieldTypeString",
+            "visible": true
+          }
+        ],
+        "enablePopup": true
+      },
+      "useDynamicSchema": false,
+      "ignore": true,
+      "layerInvisible": false
+    },
+    {
+      "name": "AvisosMadrid2018_Select_Buff",
+      "dataType": "GPFeatureRecordSetLayer",
+      "description": "S",
+      "defaultValue": {
+        "displayFieldName": "",
+        "geometryType": "esriGeometryPolygon",
+        "spatialReference": {
+          "wkid": 25830,
+          "latestWkid": 25830
+        },
+        "fields": [
+          {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OID"
+          },
+          {
+            "name": "RepeticionMismoAviso",
+            "type": "esriFieldTypeSmallInteger",
+            "alias": "RepeticionAvisos"
+          },
+          {
+            "name": "Date",
+            "type": "esriFieldTypeDate",
+            "alias": "Fecha",
+            "length": 8
+          },
+          {
+            "name": "Barrio",
+            "type": "esriFieldTypeString",
+            "alias": "Barrio",
+            "length": 50
+          },
+          {
+            "name": "Razon",
+            "type": "esriFieldTypeString",
+            "alias": "Razon",
+            "length": 255
+          },
+          {
+            "name": "BUFF_DIST",
+            "type": "esriFieldTypeDouble",
+            "alias": "BUFF_DIST"
+          },
+          {
+            "name": "ORIG_FID",
+            "type": "esriFieldTypeInteger",
+            "alias": "ORIG_FID"
+          },
+          {
+            "name": "Shape_Length",
+            "type": "esriFieldTypeDouble",
+            "alias": "Shape_Length"
+          },
+          {
+            "name": "Shape_Area",
+            "type": "esriFieldTypeDouble",
+            "alias": "Shape_Area"
+          }
+        ],
+        "features": [],
+        "exceededTransferLimit": false
+      },
+      "category": "",
+      "label": "AvisosMadrid2018_Select_Buff",
+      "visible": true,
+      "required": true,
+      "featureSetMode": "layers",
+      "tooltip": "AvisosMadrid2018_Select_Buff",
+      "renderer": {
+        "type": "simple",
+        "symbol": {
+          "color": [
+            155,
+            187,
+            89,
+            128
+          ],
+          "outline": {
+            "color": [
+              115,
+              140,
+              61,
+              255
+            ],
+            "width": 1.5,
+            "type": "esriSLS",
+            "style": "esriSLSSolid"
+          },
+          "type": "esriSFS",
+          "style": "esriSFSSolid"
+        }
+      },
+      "popup": {
+        "title": "",
+        "fields": [
+          {
+            "name": "OBJECTID",
+            "alias": "OID",
+            "type": "esriFieldTypeOID",
+            "visible": true
+          },
+          {
+            "name": "RepeticionMismoAviso",
+            "alias": "RepeticionAvisos",
+            "type": "esriFieldTypeSmallInteger",
+            "visible": true
+          },
+          {
+            "name": "Date",
+            "alias": "Fecha",
+            "type": "esriFieldTypeDate",
+            "visible": true
+          },
+          {
+            "name": "Barrio",
+            "alias": "Barrio",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "Razon",
+            "alias": "Razon",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "BUFF_DIST",
+            "alias": "BUFF_DIST",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          },
+          {
+            "name": "ORIG_FID",
+            "alias": "ORIG_FID",
+            "type": "esriFieldTypeInteger",
+            "visible": true
+          },
+          {
+            "name": "Shape_Length",
+            "alias": "Shape_Length",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          },
+          {
+            "name": "Shape_Area",
+            "alias": "Shape_Area",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          }
+        ],
+        "enablePopup": true
+      },
+      "useDynamicSchema": false,
+      "ignore": true,
+      "layerInvisible": false
+    },
+    {
+      "name": "SSCC_Madrid_Layer",
+      "dataType": "GPFeatureRecordSetLayer",
+      "description": "S",
+      "defaultValue": {
+        "displayFieldName": "",
+        "geometryType": "esriGeometryPolygon",
+        "spatialReference": {
+          "wkid": 25830,
+          "latestWkid": 25830
+        },
+        "fields": [
+          {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OBJECTID"
+          },
+          {
+            "name": "CDSSCC",
+            "type": "esriFieldTypeString",
+            "alias": "CDSSCC",
+            "length": 10
+          },
+          {
+            "name": "CODPROV",
+            "type": "esriFieldTypeString",
+            "alias": "CODPROV",
+            "length": 2
+          },
+          {
+            "name": "CODMUNI",
+            "type": "esriFieldTypeString",
+            "alias": "CODMUNI",
+            "length": 5
+          },
+          {
+            "name": "POB_TOTAL",
+            "type": "esriFieldTypeDouble",
+            "alias": "POB_TOTAL"
+          },
+          {
+            "name": "POB_SPAIN",
+            "type": "esriFieldTypeDouble",
+            "alias": "T España"
+          },
+          {
+            "name": "Shape_Length",
+            "type": "esriFieldTypeDouble",
+            "alias": "Shape_Length"
+          },
+          {
+            "name": "Shape_Area",
+            "type": "esriFieldTypeDouble",
+            "alias": "Shape_Area"
+          }
+        ],
+        "features": [],
+        "exceededTransferLimit": false
+      },
+      "category": "",
+      "label": "SSCC_Madrid_Layer",
+      "visible": true,
+      "required": true,
+      "featureSetMode": "layers",
+      "tooltip": "SSCC_Madrid_Layer",
+      "renderer": {
+        "type": "simple",
+        "symbol": {
+          "color": [
+            155,
+            187,
+            89,
+            128
+          ],
+          "outline": {
+            "color": [
+              115,
+              140,
+              61,
+              255
+            ],
+            "width": 1.5,
+            "type": "esriSLS",
+            "style": "esriSLSSolid"
+          },
+          "type": "esriSFS",
+          "style": "esriSFSSolid"
+        }
+      },
+      "popup": {
+        "title": "",
+        "fields": [
+          {
+            "name": "OBJECTID",
+            "alias": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "visible": true
+          },
+          {
+            "name": "CDSSCC",
+            "alias": "CDSSCC",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "CODPROV",
+            "alias": "CODPROV",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "CODMUNI",
+            "alias": "CODMUNI",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "POB_TOTAL",
+            "alias": "POB_TOTAL",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          },
+          {
+            "name": "POB_SPAIN",
+            "alias": "T España",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          },
+          {
+            "name": "Shape_Length",
+            "alias": "Shape_Length",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          },
+          {
+            "name": "Shape_Area",
+            "alias": "Shape_Area",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          }
+        ],
+        "enablePopup": true
+      },
+      "useDynamicSchema": false,
+      "ignore": true,
+      "layerInvisible": false
+    },
+    {
+      "name": "AvisosMadrid2018_Buffer_Inte",
+      "dataType": "GPFeatureRecordSetLayer",
+      "description": "S",
+      "defaultValue": {
+        "displayFieldName": "",
+        "geometryType": "esriGeometryPolygon",
+        "spatialReference": {
+          "wkid": 25830,
+          "latestWkid": 25830
+        },
+        "fields": [
+          {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OID"
+          },
+          {
+            "name": "FID_AvisosMadrid2018_Select3_Buf",
+            "type": "esriFieldTypeInteger",
+            "alias": "FID_AvisosMadrid2018_Select3_Buf"
+          },
+          {
+            "name": "RepeticionMismoAviso",
+            "type": "esriFieldTypeSmallInteger",
+            "alias": "RepeticionAvisos"
+          },
+          {
+            "name": "Date",
+            "type": "esriFieldTypeDate",
+            "alias": "Fecha",
+            "length": 8
+          },
+          {
+            "name": "Barrio",
+            "type": "esriFieldTypeString",
+            "alias": "Barrio",
+            "length": 50
+          },
+          {
+            "name": "Razon",
+            "type": "esriFieldTypeString",
+            "alias": "Razon",
+            "length": 255
+          },
+          {
+            "name": "BUFF_DIST",
+            "type": "esriFieldTypeDouble",
+            "alias": "BUFF_DIST"
+          },
+          {
+            "name": "ORIG_FID",
+            "type": "esriFieldTypeInteger",
+            "alias": "ORIG_FID"
+          },
+          {
+            "name": "FID_SSCC_Madrid",
+            "type": "esriFieldTypeInteger",
+            "alias": "FID_SSCC_Madrid"
+          },
+          {
+            "name": "CDSSCC",
+            "type": "esriFieldTypeString",
+            "alias": "CDSSCC",
+            "length": 10
+          },
+          {
+            "name": "CODPROV",
+            "type": "esriFieldTypeString",
+            "alias": "CODPROV",
+            "length": 2
+          },
+          {
+            "name": "CODMUNI",
+            "type": "esriFieldTypeString",
+            "alias": "CODMUNI",
+            "length": 5
+          },
+          {
+            "name": "POB_TOTAL",
+            "type": "esriFieldTypeDouble",
+            "alias": "POB_TOTAL"
+          },
+          {
+            "name": "POB_SPAIN",
+            "type": "esriFieldTypeDouble",
+            "alias": "T España"
+          },
+          {
+            "name": "Shape_Length",
+            "type": "esriFieldTypeDouble",
+            "alias": "Shape_Length"
+          },
+          {
+            "name": "Shape_Area",
+            "type": "esriFieldTypeDouble",
+            "alias": "Shape_Area"
+          }
+        ],
+        "features": [],
+        "exceededTransferLimit": false
+      },
+      "category": "",
+      "label": "AvisosMadrid2018_Buffer_Inte",
+      "visible": true,
+      "required": true,
+      "featureSetMode": "layers",
+      "tooltip": "AvisosMadrid2018_Buffer_Inte",
+      "renderer": {
+        "type": "simple",
+        "symbol": {
+          "color": [
+            155,
+            187,
+            89,
+            128
+          ],
+          "outline": {
+            "color": [
+              115,
+              140,
+              61,
+              255
+            ],
+            "width": 1.5,
+            "type": "esriSLS",
+            "style": "esriSLSSolid"
+          },
+          "type": "esriSFS",
+          "style": "esriSFSSolid"
+        }
+      },
+      "popup": {
+        "title": "",
+        "fields": [
+          {
+            "name": "OBJECTID",
+            "alias": "OID",
+            "type": "esriFieldTypeOID",
+            "visible": true
+          },
+          {
+            "name": "FID_AvisosMadrid2018_Select3_Buf",
+            "alias": "FID_AvisosMadrid2018_Select3_Buf",
+            "type": "esriFieldTypeInteger",
+            "visible": true
+          },
+          {
+            "name": "RepeticionMismoAviso",
+            "alias": "RepeticionAvisos",
+            "type": "esriFieldTypeSmallInteger",
+            "visible": true
+          },
+          {
+            "name": "Date",
+            "alias": "Fecha",
+            "type": "esriFieldTypeDate",
+            "visible": true
+          },
+          {
+            "name": "Barrio",
+            "alias": "Barrio",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "Razon",
+            "alias": "Razon",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "BUFF_DIST",
+            "alias": "BUFF_DIST",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          },
+          {
+            "name": "ORIG_FID",
+            "alias": "ORIG_FID",
+            "type": "esriFieldTypeInteger",
+            "visible": true
+          },
+          {
+            "name": "FID_SSCC_Madrid",
+            "alias": "FID_SSCC_Madrid",
+            "type": "esriFieldTypeInteger",
+            "visible": true
+          },
+          {
+            "name": "CDSSCC",
+            "alias": "CDSSCC",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "CODPROV",
+            "alias": "CODPROV",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "CODMUNI",
+            "alias": "CODMUNI",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "POB_TOTAL",
+            "alias": "POB_TOTAL",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          },
+          {
+            "name": "POB_SPAIN",
+            "alias": "T España",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          },
+          {
+            "name": "Shape_Length",
+            "alias": "Shape_Length",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          },
+          {
+            "name": "Shape_Area",
+            "alias": "Shape_Area",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          }
+        ],
+        "enablePopup": true
+      },
+      "useDynamicSchema": false,
+      "ignore": true,
+      "layerInvisible": false
+    },
+    {
+      "name": "AvisosMadrid2018_Buffer_Inte1",
+      "dataType": "GPFeatureRecordSetLayer",
+      "description": "S",
+      "defaultValue": {
+        "displayFieldName": "",
+        "geometryType": "esriGeometryPolygon",
+        "spatialReference": {
+          "wkid": 25830,
+          "latestWkid": 25830
+        },
+        "fields": [
+          {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OID"
+          },
+          {
+            "name": "FID_AvisosMadrid2018_Select3_Buf",
+            "type": "esriFieldTypeInteger",
+            "alias": "FID_AvisosMadrid2018_Select3_Buf"
+          },
+          {
+            "name": "Barrio",
+            "type": "esriFieldTypeString",
+            "alias": "Barrio",
+            "length": 50
+          },
+          {
+            "name": "SUM_POB_TOTAL",
+            "type": "esriFieldTypeDouble",
+            "alias": "SUM_POB_TOTAL"
+          },
+          {
+            "name": "Shape_Length",
+            "type": "esriFieldTypeDouble",
+            "alias": "Shape_Length"
+          },
+          {
+            "name": "Shape_Area",
+            "type": "esriFieldTypeDouble",
+            "alias": "Shape_Area"
+          }
+        ],
+        "features": [],
+        "exceededTransferLimit": false
+      },
+      "category": "",
+      "label": "Población afectada",
+      "visible": true,
+      "required": true,
+      "featureSetMode": "layers",
+      "tooltip": "AvisosMadrid2018_Buffer_Inte1",
+      "renderer": {
+        "type": "simple",
+        "symbol": {
+          "color": [
+            155,
+            187,
+            89,
+            128
+          ],
+          "outline": {
+            "color": [
+              115,
+              140,
+              61,
+              255
+            ],
+            "width": 1.5,
+            "type": "esriSLS",
+            "style": "esriSLSSolid"
+          },
+          "type": "esriSFS",
+          "style": "esriSFSSolid"
+        }
+      },
+      "popup": {
+        "title": "",
+        "fields": [
+          {
+            "name": "OBJECTID",
+            "alias": "OID",
+            "type": "esriFieldTypeOID",
+            "visible": false
+          },
+          {
+            "name": "FID_AvisosMadrid2018_Select3_Buf",
+            "alias": "FID_AvisosMadrid2018_Select3_Buf",
+            "type": "esriFieldTypeInteger",
+            "visible": false
+          },
+          {
+            "name": "Barrio",
+            "alias": "Barrio",
+            "type": "esriFieldTypeString",
+            "visible": true
+          },
+          {
+            "name": "SUM_POB_TOTAL",
+            "alias": "Población afectada",
+            "type": "esriFieldTypeDouble",
+            "visible": true
+          },
+          {
+            "name": "Shape_Length",
+            "alias": "Shape_Length",
+            "type": "esriFieldTypeDouble",
+            "visible": false
+          },
+          {
+            "name": "Shape_Area",
+            "alias": "Shape_Area",
+            "type": "esriFieldTypeDouble",
+            "visible": false
+          }
+        ],
+        "enablePopup": true
+      },
+      "useDynamicSchema": false,
+      "ignore": false,
+      "layerInvisible": false
+    },
+    {
+      "name": "TFM/AfectadosPoblacion",
+      "label": "Población afectada",
+      "tooltip": "TFM/AfectadosPoblacion",
+      "dataType": "MapServiceLayer",
+      "layerNames": [
+        "AfectadosPoblacion",
+        "Output Feature Class",
+        "AvisosMadrid2018_Select_Buff",
+        "AvisosMadrid2018_Buffer_Inte",
+        "AvisosMadrid2018_Buffer_Inte1"
+      ],
+      "visible": true,
+      "required": "",
+      "defaultValue": null,
+      "ignore": false,
+      "layerInvisible": false
+    }
+  ],
+  "shareResults": true,
+  "layerOrder": [
+    "Output_Feature_Class",
+    "AvisosMadrid2018_Select_Buff",
+    "SSCC_Madrid_Layer",
+    "AvisosMadrid2018_Buffer_Inte",
+    "AvisosMadrid2018_Buffer_Inte1",
+    "Feature_Set"
+  ],
+  "showExportButton": false
+}

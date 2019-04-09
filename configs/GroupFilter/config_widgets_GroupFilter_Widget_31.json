@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "Razón aviso",
+      "desc": "",
+      "operator": "",
+      "defaultVal": "",
+      "appendSameLayer": true,
+      "appendSameLayerConjunc": "OR",
+      "caseSearch": false,
+      "layers": [
+        {
+          "layer": "Resumen_avisos_2018_8179",
+          "field": "Razon",
+          "dataType": "esriFieldTypeString",
+          "useDomain": true
+        }
+      ]
+    }
+  ],
+  "persistOnClose": false,
+  "slAppendChoice": "OR"
+}

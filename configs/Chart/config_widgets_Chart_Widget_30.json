@@ -1,0 +1,50 @@
+{
+  "charts": [
+    {
+      "url": "",
+      "filter": {
+        "logicalOperator": "AND",
+        "parts": [],
+        "expr": "1=1"
+      },
+      "description": "",
+      "symbol": {
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriPMS",
+        "url": "http://static.arcgis.com/images/Symbols/Basic/esriCrimeMarker_86_Blue.png",
+        "imageData": "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",
+        "contentType": "image/png",
+        "width": 18,
+        "height": 18
+      },
+      "webMapLayerId": "Resumen_avisos_2018_8179",
+      "mode": "category",
+      "name": "Resumen avisos 2018 - AvisosMadrid2018",
+      "highLightColor": "#ff0000",
+      "types": [
+        {
+          "type": "line",
+          "display": {
+            "colors": [
+              "#5d9cd3"
+            ],
+            "showHorizontalAxis": true,
+            "showVerticalAxis": true,
+            "showLegend": true
+          }
+        }
+      ],
+      "categoryField": "RepeticionMismoAviso",
+      "operation": "sum",
+      "valueFields": [
+        "RepeticionMismoAviso"
+      ],
+      "sortOrder": {
+        "isLabelAxis": true,
+        "isAsc": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,552 @@
+{
+  "theme": {
+    "name": "DartTheme",
+    "styles": [
+      "pink",
+      "turquoise",
+      "blue",
+      "purple",
+      "default",
+      "green",
+      "orange",
+      "red"
+    ],
+    "version": "2.11",
+    "sharedTheme": {
+      "isPortalSupport": true,
+      "useHeader": false,
+      "useLogo": false
+    },
+    "customStyles": {
+      "mainBackgroundColor": "#808080"
+    }
+  },
+  "portalUrl": "https://martabescansa7.maps.arcgis.com",
+  "appId": "",
+  "authorizedCrossOriginDomains": [],
+  "title": "Mejora Madrid - Herramientas de gestión y análisis",
+  "subtitle": "",
+  "keepAppState": true,
+  "logo": "images/logo.jpeg",
+  "geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+  "links": [],
+  "widgetOnScreen": {
+    "widgets": [
+      {
+        "uri": "themes/DartTheme/widgets/DartController/Widget",
+        "position": {
+          "left": 0,
+          "right": 0,
+          "bottom": 20,
+          "relativeTo": "map"
+        },
+        "version": "2.11",
+        "id": "themes_DartTheme_widgets_DartController_Widget_20",
+        "name": "DartController"
+      },
+      {
+        "uri": "widgets/OverviewMap/Widget",
+        "visible": false,
+        "position": {
+          "right": 0,
+          "top": 0,
+          "relativeTo": "map"
+        },
+        "version": "2.11",
+        "id": "widgets_OverviewMap_Widget_21",
+        "name": "OverviewMap"
+      },
+      {
+        "uri": "widgets/Scalebar/Widget",
+        "visible": false,
+        "position": {
+          "left": 10,
+          "bottom": 1,
+          "zIndex": 100,
+          "relativeTo": "map"
+        },
+        "version": "2.11",
+        "id": "widgets_Scalebar_Widget_22",
+        "name": "Scalebar"
+      },
+      {
+        "uri": "widgets/Coordinate/Widget",
+        "visible": false,
+        "position": {
+          "right": 10,
+          "bottom": 0,
+          "zIndex": 102,
+          "relativeTo": "map"
+        },
+        "version": "2.11",
+        "id": "widgets_Coordinate_Widget_23",
+        "name": "Coordinate"
+      },
+      {
+        "uri": "widgets/AttributeTable/Widget",
+        "visible": false,
+        "version": "2.11",
+        "position": {
+          "relativeTo": "browser"
+        },
+        "id": "widgets_AttributeTable_Widget_24",
+        "name": "AttributeTable"
+      },
+      {
+        "uri": "widgets/Splash/Widget",
+        "visible": false,
+        "position": {
+          "relativeTo": "browser"
+        },
+        "version": "2.11",
+        "id": "widgets_Splash_Widget_25",
+        "name": "Splash"
+      },
+      {
+        "uri": "widgets/FullScreen/Widget",
+        "visible": false,
+        "position": {
+          "right": 8,
+          "bottom": 130,
+          "relativeTo": "map"
+        },
+        "version": "2.11",
+        "id": "widgets_FullScreen_Widget_26",
+        "name": "FullScreen"
+      }
+    ],
+    "panel": {
+      "uri": "jimu/OnScreenWidgetPanel",
+      "position": {
+        "relativeTo": "map"
+      }
+    }
+  },
+  "map": {
+    "3D": false,
+    "2D": true,
+    "position": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "itemId": "ba69eaafa82248d2874782254155a3a9",
+    "mapOptions": {},
+    "id": "map",
+    "portalUrl": "https://www.arcgis.com",
+    "mapRefreshInterval": {
+      "useWebMapRefreshInterval": true
+    }
+  },
+  "widgetPool": {
+    "panel": {
+      "uri": "themes/DartTheme/panels/DartPanel/Panel",
+      "position": {
+        "relativeTo": "map"
+      }
+    },
+    "widgets": [
+      {
+        "uri": "widgets/Legend/Widget",
+        "version": "2.11",
+        "id": "widgets_Legend_Widget_18",
+        "name": "Legend",
+        "index": 2
+      },
+      {
+        "uri": "widgets/LayerList/Widget",
+        "version": "2.11",
+        "id": "widgets_LayerList_Widget_19",
+        "name": "LayerList",
+        "index": 3
+      },
+      {
+        "uri": "widgets/ZoomSlider/Widget",
+        "isPreconfiguredInTheme": true,
+        "id": "widgets_ZoomSlider_Widget_27",
+        "name": "ZoomSlider",
+        "version": "2.11",
+        "position": {
+          "relativeTo": "map"
+        },
+        "index": 4
+      },
+      {
+        "name": "Geoprocessing",
+        "version": "2.11",
+        "icon": "configs\\Geoprocessing\\icon_widgets_Geoprocessing_Widget_28.png",
+        "uri": "widgets/Geoprocessing/Widget",
+        "config": "configs/Geoprocessing/config_widgets_Geoprocessing_Widget_28.json",
+        "index": 5,
+        "id": "widgets_Geoprocessing_Widget_28"
+      },
+      {
+        "name": "Geoprocessing",
+        "label": "Geoprocessing_2",
+        "version": "2.11",
+        "icon": "configs\\Geoprocessing\\icon_widgets_Geoprocessing_Widget_29.png",
+        "uri": "widgets/Geoprocessing/Widget",
+        "config": "configs/Geoprocessing/config_widgets_Geoprocessing_Widget_29.json",
+        "index": 6,
+        "id": "widgets_Geoprocessing_Widget_29"
+      },
+      {
+        "name": "Chart",
+        "version": "2.11",
+        "icon": "configs\\Chart\\icon_widgets_Chart_Widget_30.jpeg",
+        "uri": "widgets/Chart/Widget",
+        "config": "configs/Chart/config_widgets_Chart_Widget_30.json",
+        "index": 7,
+        "id": "widgets_Chart_Widget_30"
+      },
+      {
+        "name": "GroupFilter",
+        "version": "2.11",
+        "uri": "widgets/GroupFilter/Widget",
+        "config": "configs/GroupFilter/config_widgets_GroupFilter_Widget_31.json",
+        "index": 9,
+        "id": "widgets_GroupFilter_Widget_31"
+      }
+    ],
+    "groups": []
+  },
+  "loadingPage": {
+    "backgroundColor": "#2b4b6d",
+    "backgroundImage": {
+      "visible": true
+    },
+    "loadingGif": {
+      "visible": true,
+      "uri": "/webappbuilder/apps/8/configs/loading/images/predefined_loading_3.gif",
+      "width": 32,
+      "height": 32
+    }
+  },
+  "wabVersion": "2.11",
+  "isTemplateApp": true,
+  "isWebTier": false,
+  "httpProxy": {
+    "useProxy": true,
+    "alwaysUseProxy": false,
+    "url": "",
+    "rules": []
+  },
+  "dataSource": {
+    "dataSources": {
+      "widget~widgets_Geoprocessing_Widget_28~filter-Output_Feature_Class": {
+        "id": "widget~widgets_Geoprocessing_Widget_28~filter-Output_Feature_Class",
+        "type": "Features",
+        "label": "Output_Feature_Class",
+        "dataSchema": {
+          "geometryType": "esriGeometryPoint",
+          "fields": [
+            {
+              "name": "OBJECTID",
+              "type": "esriFieldTypeOID",
+              "alias": "OID"
+            },
+            {
+              "name": "RepeticionMismoAviso",
+              "type": "esriFieldTypeSmallInteger",
+              "alias": "RepeticionAvisos"
+            },
+            {
+              "name": "Date",
+              "type": "esriFieldTypeDate",
+              "alias": "Fecha",
+              "length": 8
+            },
+            {
+              "name": "Barrio",
+              "type": "esriFieldTypeString",
+              "alias": "Barrio",
+              "length": 50
+            },
+            {
+              "name": "Razon",
+              "type": "esriFieldTypeString",
+              "alias": "Razon",
+              "length": 255
+            }
+          ],
+          "objectIdField": {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OID"
+          }
+        }
+      },
+      "widget~widgets_Geoprocessing_Widget_28~filter-AvisosMadrid2018_Select_Buff": {
+        "id": "widget~widgets_Geoprocessing_Widget_28~filter-AvisosMadrid2018_Select_Buff",
+        "type": "Features",
+        "label": "AvisosMadrid2018_Select_Buff",
+        "dataSchema": {
+          "geometryType": "esriGeometryPolygon",
+          "fields": [
+            {
+              "name": "OBJECTID",
+              "type": "esriFieldTypeOID",
+              "alias": "OID"
+            },
+            {
+              "name": "RepeticionMismoAviso",
+              "type": "esriFieldTypeSmallInteger",
+              "alias": "RepeticionAvisos"
+            },
+            {
+              "name": "Date",
+              "type": "esriFieldTypeDate",
+              "alias": "Fecha",
+              "length": 8
+            },
+            {
+              "name": "Barrio",
+              "type": "esriFieldTypeString",
+              "alias": "Barrio",
+              "length": 50
+            },
+            {
+              "name": "Razon",
+              "type": "esriFieldTypeString",
+              "alias": "Razon",
+              "length": 255
+            },
+            {
+              "name": "BUFF_DIST",
+              "type": "esriFieldTypeDouble",
+              "alias": "BUFF_DIST"
+            },
+            {
+              "name": "ORIG_FID",
+              "type": "esriFieldTypeInteger",
+              "alias": "ORIG_FID"
+            },
+            {
+              "name": "Shape_Length",
+              "type": "esriFieldTypeDouble",
+              "alias": "Shape_Length"
+            },
+            {
+              "name": "Shape_Area",
+              "type": "esriFieldTypeDouble",
+              "alias": "Shape_Area"
+            }
+          ],
+          "objectIdField": {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OID"
+          }
+        }
+      },
+      "widget~widgets_Geoprocessing_Widget_28~filter-SSCC_Madrid_Layer": {
+        "id": "widget~widgets_Geoprocessing_Widget_28~filter-SSCC_Madrid_Layer",
+        "type": "Features",
+        "label": "SSCC_Madrid_Layer",
+        "dataSchema": {
+          "geometryType": "esriGeometryPolygon",
+          "fields": [
+            {
+              "name": "OBJECTID",
+              "type": "esriFieldTypeOID",
+              "alias": "OBJECTID"
+            },
+            {
+              "name": "CDSSCC",
+              "type": "esriFieldTypeString",
+              "alias": "CDSSCC",
+              "length": 10
+            },
+            {
+              "name": "CODPROV",
+              "type": "esriFieldTypeString",
+              "alias": "CODPROV",
+              "length": 2
+            },
+            {
+              "name": "CODMUNI",
+              "type": "esriFieldTypeString",
+              "alias": "CODMUNI",
+              "length": 5
+            },
+            {
+              "name": "POB_TOTAL",
+              "type": "esriFieldTypeDouble",
+              "alias": "POB_TOTAL"
+            },
+            {
+              "name": "POB_SPAIN",
+              "type": "esriFieldTypeDouble",
+              "alias": "T España"
+            },
+            {
+              "name": "Shape_Length",
+              "type": "esriFieldTypeDouble",
+              "alias": "Shape_Length"
+            },
+            {
+              "name": "Shape_Area",
+              "type": "esriFieldTypeDouble",
+              "alias": "Shape_Area"
+            }
+          ],
+          "objectIdField": {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OBJECTID"
+          }
+        }
+      },
+      "widget~widgets_Geoprocessing_Widget_28~filter-AvisosMadrid2018_Buffer_Inte": {
+        "id": "widget~widgets_Geoprocessing_Widget_28~filter-AvisosMadrid2018_Buffer_Inte",
+        "type": "Features",
+        "label": "AvisosMadrid2018_Buffer_Inte",
+        "dataSchema": {
+          "geometryType": "esriGeometryPolygon",
+          "fields": [
+            {
+              "name": "OBJECTID",
+              "type": "esriFieldTypeOID",
+              "alias": "OID"
+            },
+            {
+              "name": "FID_AvisosMadrid2018_Select3_Buf",
+              "type": "esriFieldTypeInteger",
+              "alias": "FID_AvisosMadrid2018_Select3_Buf"
+            },
+            {
+              "name": "RepeticionMismoAviso",
+              "type": "esriFieldTypeSmallInteger",
+              "alias": "RepeticionAvisos"
+            },
+            {
+              "name": "Date",
+              "type": "esriFieldTypeDate",
+              "alias": "Fecha",
+              "length": 8
+            },
+            {
+              "name": "Barrio",
+              "type": "esriFieldTypeString",
+              "alias": "Barrio",
+              "length": 50
+            },
+            {
+              "name": "Razon",
+              "type": "esriFieldTypeString",
+              "alias": "Razon",
+              "length": 255
+            },
+            {
+              "name": "BUFF_DIST",
+              "type": "esriFieldTypeDouble",
+              "alias": "BUFF_DIST"
+            },
+            {
+              "name": "ORIG_FID",
+              "type": "esriFieldTypeInteger",
+              "alias": "ORIG_FID"
+            },
+            {
+              "name": "FID_SSCC_Madrid",
+              "type": "esriFieldTypeInteger",
+              "alias": "FID_SSCC_Madrid"
+            },
+            {
+              "name": "CDSSCC",
+              "type": "esriFieldTypeString",
+              "alias": "CDSSCC",
+              "length": 10
+            },
+            {
+              "name": "CODPROV",
+              "type": "esriFieldTypeString",
+              "alias": "CODPROV",
+              "length": 2
+            },
+            {
+              "name": "CODMUNI",
+              "type": "esriFieldTypeString",
+              "alias": "CODMUNI",
+              "length": 5
+            },
+            {
+              "name": "POB_TOTAL",
+              "type": "esriFieldTypeDouble",
+              "alias": "POB_TOTAL"
+            },
+            {
+              "name": "POB_SPAIN",
+              "type": "esriFieldTypeDouble",
+              "alias": "T España"
+            },
+            {
+              "name": "Shape_Length",
+              "type": "esriFieldTypeDouble",
+              "alias": "Shape_Length"
+            },
+            {
+              "name": "Shape_Area",
+              "type": "esriFieldTypeDouble",
+              "alias": "Shape_Area"
+            }
+          ],
+          "objectIdField": {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OID"
+          }
+        }
+      },
+      "widget~widgets_Geoprocessing_Widget_28~filter-AvisosMadrid2018_Buffer_Inte1": {
+        "id": "widget~widgets_Geoprocessing_Widget_28~filter-AvisosMadrid2018_Buffer_Inte1",
+        "type": "Features",
+        "label": "AvisosMadrid2018_Buffer_Inte1",
+        "dataSchema": {
+          "geometryType": "esriGeometryPolygon",
+          "fields": [
+            {
+              "name": "OBJECTID",
+              "type": "esriFieldTypeOID",
+              "alias": "OID"
+            },
+            {
+              "name": "FID_AvisosMadrid2018_Select3_Buf",
+              "type": "esriFieldTypeInteger",
+              "alias": "FID_AvisosMadrid2018_Select3_Buf"
+            },
+            {
+              "name": "Barrio",
+              "type": "esriFieldTypeString",
+              "alias": "Barrio",
+              "length": 50
+            },
+            {
+              "name": "SUM_POB_TOTAL",
+              "type": "esriFieldTypeDouble",
+              "alias": "SUM_POB_TOTAL"
+            },
+            {
+              "name": "Shape_Length",
+              "type": "esriFieldTypeDouble",
+              "alias": "Shape_Length"
+            },
+            {
+              "name": "Shape_Area",
+              "type": "esriFieldTypeDouble",
+              "alias": "Shape_Area"
+            }
+          ],
+          "objectIdField": {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OID"
+          }
+        }
+      }
+    },
+    "settings": {}
+  },
+  "logoLink": ""
+}

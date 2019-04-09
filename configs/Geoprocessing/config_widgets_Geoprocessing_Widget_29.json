@@ -1,0 +1,86 @@
+{
+  "name": "KDTool",
+  "displayName": "KDTool",
+  "description": "",
+  "category": "",
+  "helpUrl": "https://enterprisefor.esri.es/server/rest/directories/arcgisoutput/KDToolV5_GPServer/KDToolV5/KDTool.htm",
+  "serverInfo": {
+    "currentVersion": 10.6,
+    "url": "https://enterprisefor.esri.es/server/rest/services/KDToolV5/GPServer/",
+    "hasResultMapServer": false,
+    "resultMapServerName": "",
+    "supportsUpload": false
+  },
+  "useResultMapServer": false,
+  "taskUrl": "https://enterprisefor.esri.es/server/rest/services/KDToolV5/GPServer/KDTool",
+  "isSynchronous": false,
+  "inputParams": [
+    {
+      "name": "inputLayer",
+      "dataType": "GPString",
+      "description": "Introduce una capa de puntos",
+      "defaultValue": "AvisosMadrid2018",
+      "category": "",
+      "choiceList": [
+        "Referencia gris oscura",
+        "AvisosMadrid2018",
+        "Madrid",
+        "test",
+        "Base gris oscura"
+      ],
+      "label": "Capa de puntos",
+      "visible": true,
+      "required": true,
+      "tooltip": "Capa de puntos"
+    },
+    {
+      "name": "selectionType",
+      "dataType": "GPString",
+      "description": "dssfd",
+      "defaultValue": "Desperfectos mobiliario",
+      "category": "",
+      "choiceList": [
+        "Desperfectos mobiliario",
+        "Exceso de ruido",
+        "Actividades ilícitas",
+        "Contaminación de la vía pública"
+      ],
+      "label": "Campo 1",
+      "visible": true,
+      "required": true,
+      "tooltip": "Campo 1"
+    },
+    {
+      "name": "inputField2",
+      "dataType": "GPString",
+      "description": "Si lo prefieres, puedes añadir un campo númerico adicional para calcular la densidad de Kernel",
+      "defaultValue": "RepeticionMismoAviso",
+      "category": "",
+      "choiceList": [
+        "RepeticionMismoAviso"
+      ],
+      "label": "Campo 2 (opcional)",
+      "visible": true,
+      "required": false,
+      "tooltip": "Campo 2 (opcional)"
+    }
+  ],
+  "outputParams": [
+    {
+      "name": "outputLayer",
+      "dataType": "GPRasterDataLayer",
+      "description": "DSADAD",
+      "defaultValue": null,
+      "category": "",
+      "label": "Densidad ",
+      "visible": true,
+      "required": true,
+      "tooltip": "Raster final",
+      "ignore": false,
+      "layerInvisible": true
+    }
+  ],
+  "shareResults": false,
+  "layerOrder": [],
+  "showExportButton": false
+}
